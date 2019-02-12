@@ -34,20 +34,23 @@
 # else:
 #   print("Well done everyone!")
 
+#Define a function to determine speed, given a distance in meters and a time in minutes
 def speed_calc(distance,time):
-    return distance / (time * 60);
+    return distance / (time * 60); #Basic speed calculation
 
-def get_input(num):
+#Define a function to prompt the user for a distance and a time and return their speed
+def get_speed(num):
     print('How far did person {} run (in metres)?'.format(num))
     distance=float(input())
     print("How long (in minutes) did person {} run take to run {} metres?".format(num,distance))
     time=float(input())
     return speed_calc(distance,time)
 
-speed1 = get_input(1)
-speed2 = get_input(2)
-speed3 = get_input(3)
+speed1 = get_speed(1) #Get the speed of the first runner, save it to a variable
+speed2 = get_speed(2) #Get the speed of the second runner, save it to a variable
+speed3 = get_speed(3) #Get the speed of the thirdrunner, save it to a variable
 
+#Didn't change the speed comparison as of yet. Will submit without any changes, but I'm thinking of how to optimize this part
 if speed3 > speed2 and speed3 > speed1:
   print("Person 3 was the fastest at {} m/s".format(speed3))
 elif speed2 > speed3 and speed2 > speed1:
